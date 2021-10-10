@@ -104,9 +104,9 @@ const vcard1 = 'BEGIN:VCARD\n'
             + 'END:VCARD'
 
 /*prefix = `#`*/
-botname = 'FEBZABOTZ' //ganti jdu name bot Lu:v
+botname = 'NATZ BOTZ' //ganti jdu name bot Lu:v
 blocked = []
-fakereply = '© Created By FebzGanz' //jan di ganti lah, hormati yang buat!!
+fakereply = '© Created By Natzganz' //jan di ganti lah, hormati yang buat!!
 fake = 'Bot WhatsApp' //ganti serah lu
 
 function kyun(seconds){
@@ -158,7 +158,7 @@ client.on('group-participants-update', async (anu) => {
 	} catch {
 	ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 	}
-	teks = `Halo @${num.split('@')[0]}👋😇\nSelamat datang di group ${mdata.subject}*\n*INTRO :*\n*Nama :*\n*Umur :*\n*Askot :*\n*Ketik #Menu Untuk Akses BOT!!*`
+	teks = `Halo @${num.split('@')[0]}👋😇 si beban gc\nSelamat datang di group ${mdata.subject}*\n*INTRO :*\n*Nama :*\n*Umur :*\n*Askot :*\n*Ketik #Menu Untuk Akses BOT!!*`
 	let buff = await getBuffer(ppimg)
 	client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 	} else if (anu.action == 'remove') {
@@ -252,7 +252,7 @@ client.on('group-participants-update', async (anu) => {
 	
 //===================[ MESSAGE ]====================//
 mess = {
-wait: '*_Sabar Oy Lagi Di Proses....._*',
+wait: '*_Sabar Oy Lagi Di Proses, orang sabar disayang janda_*',
 success: '*Nih Gan Dh Jadi✓*',
 error: {
 stick: 'Gomene Senpaii...',
@@ -341,7 +341,7 @@ client.sendMessage(from, teks, text, {quoted: {key: {fromMe: false, participant:
                             itemCount : 99,
                             status: 1,
                             surface : 1,
-                            message: 'FebzGanz', //Kasih namalu
+                            message: 'NatzGanz', //Kasih namalu
                             orderTitle: 'Bang',
                             thumbnail: fs.readFileSync('./src/image/salsa.jpg'), //Gambarnye
                             sellerJid: '0@s.whatsapp.net'
