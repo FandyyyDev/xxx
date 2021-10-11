@@ -158,7 +158,7 @@ client.on('group-participants-update', async (anu) => {
 	} catch {
 	ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 	}
-	teks = `Halo @${num.split('@')[0]}👋😇 si beban gc\nSelamat datang di group ${mdata.subject}*\n*INTRO :*\n*Nama :*\n*Umur :*\n*Askot :*\n*Ketik #Menu Untuk Akses BOT!!*`
+	teks = `Halo @${num.split('@')[0]} si beban GC 👋😇\nSelamat datang di group *${mdata.subject}*\n*INTRO :*\n*Nama :*\n*Umur :*\n*Askot :*\n*Ketik #Menu Untuk Akses BOT!!*`
 	let buff = await getBuffer(ppimg)
 	client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 	} else if (anu.action == 'remove') {
@@ -408,7 +408,7 @@ switch(command) {
             case 'developer':
                   client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: {"contactMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "title": fakereply, "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./blank.png')}}}, contextInfo: { forwardingScore: 508, isForwarded: true}})
                  /*client.sendMessage(from, {displayname: "Jeff", vcard1: vcard}, MessageType.contact, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: {"contactMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "title": fakereply, "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./blank.png')}}}, contextInfo: { forwardingScore: 508, isForwarded: true}})*/
-                  client.sendMessage(from, 'Tinggalkan Pesan Kepada Owner Kami!', text, { quoted: msg, contextInfo: { forwardingScore: 508, isForwarded: true}} )
+                  client.sendMessage(from, 'Tu Nomer Pacarku >< eh owner ku maksudnya', text, { quoted: msg, contextInfo: { forwardingScore: 508, isForwarded: true}} )
 					break
             case 'help':
             case 'menu':
@@ -494,13 +494,13 @@ case 'bugreport':
 if (args.length < 1) return reply(`Ketik ${prefix}bugreport [fiturnya] [Error Nya Gimana]`) 
 teks = args.join(' ')
 reply('Terima Kasih Telah Melaporkan Bug Pada Owner, Jika Itu Sekedar Iseng Maka Akan Di Ban Oleh Bot!')
-client.sendMessage('6285849261085@s.whatsapp.net',`*INFO DARI PENGGUNA*\n*Bug Report:* ${teks}`, text)
+client.sendMessage('6285609233482@s.whatsapp.net',`*INFO DARI PENGGUNA*\n*Bug Report:* ${teks}`, text)
 break
 case 'request':
 if (args.length < 1) return reply(`Ketik ${prefix}request [fiturnya] [Error Nya Gimana]`) 
 teks = args.join(' ')
 reply('Terima Kasih Telah Request Fitur Baru Pada Owner, Jika Itu Sekedar Iseng Maka Akan Di Ban Oleh Bot!')
-client.sendMessage('6285849261085@s.whatsapp.net',`*INFO DARI PENGGUNA*\n*Request Fitur:* ${teks}`, text)
+client.sendMessage('6285609233482@s.whatsapp.net',`*INFO DARI PENGGUNA*\n*Request Fitur:* ${teks}`, text)
 break
 case 'brainly':
 brainly(args.join(" ")).then(res => {
@@ -1268,7 +1268,7 @@ teks += `@${_.split('@')[0]}\n`
 mentions(from, mentioned, true)
 client.groupRemove(from, mentioned)
 } else {
-mentions(`Berhasil Promote @${mentioned[0].split('@')[0]} Sebagai Admin Group!`, mentioned, true)
+mentions(`Cieee @${mentioned[0].split('@')[0]} ada yang naik jabatan nih, traktir dong`, mentioned, true)
 client.groupMakeAdmin(from, mentioned)
 }
 break
@@ -1279,14 +1279,14 @@ if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 if (msg.message.extendedTextMessage === undefined || msg.message.extendedTextMessage === null) return
 mentioned = msg.message.extendedTextMessage.contextInfo.mentionedJid
 if (mentioned.length > 1) {
-teks = 'Berhasil Demote\n'
+teks = 'berhasil demote\n'
 for (let _ of mentioned) {
 teks += `@${_.split('@')[0]}\n`
 }
 mentions(teks, mentioned, true)
 client.groupRemove(from, mentioned)
 } else {
-mentions(`Berhasil Demote @${mentioned[0].split('@')[0]} Menjadi Member Group!`, mentioned, true)
+mentions(`Ciee @${mentioned[0].split('@')[0]} kena demote kasian deh`, mentioned, true)
 client.groupDemoteAdmin(from, mentioned)
 }
 break
@@ -1316,7 +1316,7 @@ if (msg.message.extendedTextMessage === undefined || msg.message.extendedTextMes
 
 mentioned = msg.message.extendedTextMessage.contextInfo.mentionedJid
 
-teks = '*Mengeluarkan :* '
+teks = '*Mengeluarkan :* \nDasar wibu!'
 
 for (let _ of mentioned) {
 
