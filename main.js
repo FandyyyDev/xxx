@@ -104,7 +104,7 @@ const vcard1 = 'BEGIN:VCARD\n'
             + 'END:VCARD'
 
 /*prefix = `#`*/
-botname = 'NATZ BOTZ' //ganti jdu name bot Lu:v
+botname = 'PLANKTON BOTZ' //ganti jdu name bot Lu:v
 blocked = []
 fakereply = '© Created By Natzganz' //jan di ganti lah, hormati yang buat!!
 fake = 'Bot WhatsApp' //ganti serah lu
@@ -1295,7 +1295,7 @@ if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 if (args.length < 1) return reply('Yang mau di add jin ya?')
-if (args[0].startsWith('08')) return reply('Gunakan kode negara mas')
+if (args[0].startsWith('08')) return reply('Gunakan kode negara 62 om')
 try {
 num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
 client.groupAdd(from, [num])
@@ -1316,11 +1316,11 @@ if (msg.message.extendedTextMessage === undefined || msg.message.extendedTextMes
 
 mentioned = msg.message.extendedTextMessage.contextInfo.mentionedJid
 
-teks = '*Mengeluarkan :* \nDasar wibu!'
+teks = '*Mengeluarkan :* '
 
 for (let _ of mentioned) {
 
-teks += `@${_.split('@')[0]}\n`
+teks += `@${_.split('@')[0]}\n dasar wibu!`
 
 }
 
