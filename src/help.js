@@ -17,6 +17,7 @@ const help = (prefix, copid, tanggal, jams, botname) => {
 │◦➛ *${prefix}snk*
 │◦➛ *${prefix}info*
 │◦➛ *${prefix}donasi*
+│◦➛ *${prefix}sewabot
 ├─────────────┈ ⳹
 │ 「 *🄶🄲🄼🄴🄽🅄* 」
 │◦➛ *${prefix}setname* [text]
