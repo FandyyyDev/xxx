@@ -491,7 +491,7 @@ switch(command) {
                     break*/
 
 case 'sewabot':
-if (args.length < 1) return reply(`DAFTAR HARGA SEWA PLANKTON BOT :\n\n*- 1 MINGGU PER GRUP : 5K*\n\n*- 1 BULAN PER GRUP: 15K*\n\n*- PERMANEN PER GRUP: 30K*\n\nPAYMENT :\n\n_GOPAY ATAU DANA_`)
+if (args.length < 1) return reply(`*「「DAFTAR HARGA SEWA PLANKTON BOT 」」:*\n\n*- 1 MINGGU PER GRUP : 5K*\n\n*- 1 BULAN PER GRUP: 15K*\n\n*- PERMANEN PER GRUP: 30K*\n\nPAYMENT :\n\n_GOPAY ATAU DANA_`)
 teks = args.join(' ')
 break
 case 'bugreport':
