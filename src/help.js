@@ -35,6 +35,7 @@ const help = (prefix, copid, tanggal, jams, botname) => {
 │◦➛ *${prefix}kick* [tag mem]
 │◦➛ *${prefix}group* buka/tutup
 │◦➛ *${prefix}linkgc*
+│◦➛ *${prefix}afk <alasan>*
 ├─────────────┈ ⳹
 │ 「 *🄼🄰🄺🄴🅁* 」
 │◦➛ *${prefix}tomp3*
