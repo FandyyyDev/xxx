@@ -1,33 +1,43 @@
-const fetch = require('node-fetch') 
+let handler = async(m, { conn, text }) => {
+    let [link, resolusi] = text.split `|`
 
-const fbDown = async (fbLink) => {
-function post(url, formdata) {
-    return fetch(url, {
-        method: 'POST',
-        headers: {
-            accept: "*/*",
-            'X-Requested-With': "XMLHttpRequest",
-            'content-type': "application/x-www-form-urlencoded; charset=UTF-8"
-        },
-        body: new URLSearchParams(Object.entries(formdata))
+    if (!link) return conn.reply(m.chat, 'Uhm... urlnya mana?', m)
+    if (!resolusi) return conn.reply(m.chat, 'Harap memasukkan resolusi hd/sd !', m)
+
+    conn.reply(m.chat, 'Searching...', m)
+    new Promise((resolve, reject) => {
+        axios.get(`https://mnazria.herokuapp.com/api/fbdownloadervideo?url=` + encodeURIComponent(link))
+            .then((res) => {
+                if (resolusi == 'hd') {
+                    let dl_link = res.data.resultHD
+                } else {
+                    let dl_link = res.data.resultSD
+                }
+                conn.reply(m.chat, `*Link:* ${dl_link} \n\nfile akan segera dikirim!`, m)
+                conn.sendFile(m.chat, dl_link, 'video.mp4', `*Title:* ${text}\n*Link:* ${dl_link}`, m)
+
+            })
+            .catch(reject => {
+                conn.reply(m.chat, 'Ada yang Erorr!', m)
+            })
     })
+
 }
 
-const res = await post('https://saveas.co/system/action.php', {
-url: fbLink, 
-token: ''
-})
-const mela = await res.json()
-const hasil = []
-let judul = mela.title
-let source = mela.source
-let thumb = mela.thumbnail
-let link = mela.links[1].url
-let size = mela.links[1].size
-let quality = mela.links[1].quality
-let type = mela.links[1].type
-hasil.push({ judul, source, thumb, link, size, quality, type }) 
-return hasil
-}
+handler.help = ['fb <hd/sd|url>']
+handler.tags = ['downloader']
+handler.command = /^fb$/i
+handler.owner = false
+handler.mods = false
+handler.premium = false
+handler.group = false
+handler.private = false
 
-module.exports = { fbDown }
+handler.admin = false
+handler.botAdmin = false
+
+handler.fail = null
+handler.exp = 0
+handler.limit = true
+
+module.exports = handler
