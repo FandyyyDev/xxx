@@ -3,10 +3,10 @@ const help = (prefix, copid, tanggal, jams, botname) => {
 
 ┌━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙
 │ *⦿ Bot Prefix :* [all prefix]
-│ *⦿ Owner :* FebzGanz
+│ *⦿ Owner :* Natz
 │ *⦿ Today :* ${tanggal}
 │ *⦿ Jam :* ${jams}
-│ *⦿ Ig:* https://bit.ly/3hqqQzZ
+│ *⦿ Ig:* https://bit.ly/3DzVY8H
 └┬────────────┈ ⳹
 ┌┤ 「  *Kasus Covid-19 Indonesia*  」
 ││➥ *Terinfeksi :* ${copid[0].kasus}
@@ -17,7 +17,7 @@ const help = (prefix, copid, tanggal, jams, botname) => {
 │◦➛ *${prefix}snk*
 │◦➛ *${prefix}info*
 │◦➛ *${prefix}donasi*
-│◦➛ *${prefix}sewabot
+│◦➛ *${prefix}sewabot*
 ├─────────────┈ ⳹
 │ 「 *🄶🄲🄼🄴🄽🅄* 」
 │◦➛ *${prefix}setname* [text]
@@ -35,7 +35,6 @@ const help = (prefix, copid, tanggal, jams, botname) => {
 │◦➛ *${prefix}kick* [tag mem]
 │◦➛ *${prefix}group* buka/tutup
 │◦➛ *${prefix}linkgc*
-│◦➛ *${prefix}afk <alasan>*
 ├─────────────┈ ⳹
 │ 「 *🄼🄰🄺🄴🅁* 」
 │◦➛ *${prefix}tomp3*
