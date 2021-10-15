@@ -535,7 +535,7 @@ break
 //=============> fun menu <===============\\
              
 case 'game'
-if (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakanime[sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -546,7 +546,7 @@ delete tebakanime[sender.split('@')[0]]
 fs.writeFileSync("./src/tebakanime.json", JSON.stringify(tebakanime))
 }
 break
-if (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebaklagu[sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -557,7 +557,7 @@ delete tebaklagu[sender.split('@')[0]]
 fs.writeFileSync("./src/tebaklagu.json", JSON.stringify(tebaklagu))
 }
 break
-if (tebaktebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (tebaktebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebaktebakan[sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -568,7 +568,7 @@ delete tebaktebakan[sender.split('@')[0]]
 fs.writeFileSync("./src/tebaktebakan.json", JSON.stringify(tebaktebakan))                    
 }
 break
-if (kuismath.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (kuismath.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = kuismath[sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -579,7 +579,7 @@ delete kuismath[sender.split('@')[0]]
 fs.writeFileSync("./src/kuismath.json", JSON.stringify(kuismath))
 }
 break
-if (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = asahotak[sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -589,7 +589,7 @@ delete asahotak[sender.split('@')[0]]
 fs.writeFileSync("./src/asahotak.json", JSON.stringify(asahotak))
 }
 break
-if (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = caklontong[sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -600,7 +600,7 @@ delete caklontong[sender.split('@')[0]]
 fs.writeFileSync("./src/caklontong.json", JSON.stringify(caklontong))
 }
 break
-if (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakjenaka[sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -611,7 +611,7 @@ delete tebakjenaka[sender.split('@')[0]]
 fs.writeFileSync("./src/tebakjenaka.json", JSON.stringify(tebakjenaka))
 }
 break
-if (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebaklirik[sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -622,7 +622,7 @@ delete tebaklirik[sender.split('@')[0]]
 fs.writeFileSync("./src/tebaklirik.json", JSON.stringify(tebaklirik))
 }
 break
-if (tebakimia.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (tebakimia.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakimia[sender.split('@')[0]]
 var htgmcc = randomNomor(100)
@@ -632,7 +632,7 @@ delete tebakimia[sender.split('@')[0]]
 fs.writeFileSync("./src/tebakimia.json", JSON.stringify(tebakimia))
 }
 break
-if (tebaksiapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (tebaksiapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebaksiapaaku[sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -643,7 +643,7 @@ delete tebaksiapaaku[sender.split('@')[0]]
 fs.writeFileSync("./src/tebaksiapaaku.json", JSON.stringify(tebaksiapaaku))
 }
 break
-if (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakbendera[sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -654,7 +654,7 @@ delete tebakbendera[sender.split('@')[0]]
 fs.writeFileSync("./src/tebakbendera.json", JSON.stringify(tebakbendera))
 }
 break
-if (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = susunkata[sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -665,7 +665,7 @@ delete susunkata[sender.split('@')[0]]
 fs.writeFileSync("./src/susunkata.json", JSON.stringify(susunkata))
 }
 break
-if (tebakata.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+const (tebakata.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakata[sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
