@@ -734,40 +734,6 @@ break
               } else {
               reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU LOSE*  ]`)
 }
-              break
-       case 'suit': //nyolong dari zenz
-              if (!q) return reply(`Kirim perintah ${prefix}suit gunting / batu / kertas`)
-              const userspilih = q
-              if (!userspilih.match(/batu|gunting|kertas/)) return reply(`Pilih batu, kertas, gunting`)
-              var computer = Math.random();
-              if (computer < 0.34 ) {
-              computer = 'batu';
-              } else if( computer >= 0.34 && computer < 0.67) {
-              computer = 'gunting';
-              } else {
-              computer = 'kertas';
-}
-              if ( userspilih == computer ) {
-              reply(`Pertandingan Seri!`)
-              } else if ( userspilih == 'batu' ) {
-              if( computer == 'gunting' ) {
-              reply(`Kamu memilih Batu dan bot Gunting\nKamu menang!`)
-              } else {
-              reply(`Kamu memilih Batu dan bot memilih Kertas\nKamu kalah!`)
-}
-              } else if ( userspilih == 'gunting' ) {
-              if( computer == 'batu' ) {
-              reply(`Kamu memilih Gunting dan bot memilih Batu\nKamu kalah!`)
-              } else {
-              reply(`Kamu memilih Gunting dan bot Kertas\nKamu menang!`)
-}
-              } else if ( userspilih == 'kertas' ) {
-              if( computer == 'batu' ) {
-              reply(`Kamu memilih Kertas dan bot Batu\nKamu menang!`)
-              } else {
-              reply(`Kamu memilih Kertas dan bot memilih Gunting\nKamu kalah`)
-}
-}
 break
 case 'swm':
 if (type === 'imageMessage' || isTagedImage){
