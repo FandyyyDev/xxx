@@ -538,7 +538,7 @@ case 'game'
 const (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakanime[sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
+const (budy.toLowerCase() == jawaban) {
 var htgmu = randomNomor(100)
 atm.addKoinUser(sender, htgmu, _uang)
 await reply(`*_🎮 Tebak Anime 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmu} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebakanime*`)
@@ -549,7 +549,7 @@ break
 const (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebaklagu[sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
+const (budy.toLowerCase() == jawaban) {
 var htpl = randomNomor(100)
 atm.addKoinUser(sender, htpl, _uang)
 await reply(`*_🎮 Tebak Lagu 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htpl} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebaklagu*`)
@@ -560,7 +560,7 @@ break
 const (tebaktebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebaktebakan[sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
+const (budy.toLowerCase() == jawaban) {
 var htpu = randomNomor(100)
 atm.addKoinUser(sender, htpu, _uang)
 await reply(`*_🎮 Tebak Tebakan 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htpu} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebaktebakan*`)
@@ -571,7 +571,7 @@ break
 const (kuismath.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = kuismath[sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
+const (budy.toLowerCase() == jawaban) {
 var htcc = randomNomor(100)
 atm.addKoinUser(sender, htcc, _uang)
 await reply(`*_🎮 Kuis Matematika  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htcc} 💰_\n\nIngin bermain lagi? kirim *${prefix}kuismath*`)
@@ -582,7 +582,7 @@ break
 const (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = asahotak[sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
+const (budy.toLowerCase() == jawaban) {
 addKoinUser(sender, htgm, _uang)
 await reply(`*_🎮 Asah Otak  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgm} 💰_\n\nIngin bermain lagi? kirim *${prefix}asahotak*`)
 delete asahotak[sender.split('@')[0]]
@@ -592,7 +592,7 @@ break
 const (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = caklontong[sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
+const (budy.toLowerCase() == jawaban) {
 var htgmi = randomNomor(100)
 atm.addKoinUser(sender, htgmi, _uang)
 await reply(`*_🎮 Caklontong  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmi} 💰_\n\nIngin bermain lagi? kirim *${prefix}caklontong*`)
@@ -603,7 +603,7 @@ break
 const (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakjenaka[sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
+const (budy.toLowerCase() == jawaban) {
 var htgmuu = randomNomor(100)
 atm.addKoinUser(sender, htgmuu, _uang)
 await reply(`*_🎮 Tebak Jenaka  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmuu} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebakjenaka*`)
@@ -614,7 +614,7 @@ break
 const (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebaklirik[sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
+const (budy.toLowerCase() == jawaban) {
 var htgmii = randomNomor(100)
 atm.addKoinUser(sender, htgmii, _uang)
 await reply(`*_🎮 Tebak Lirik 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmii} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebaklirik*`)
