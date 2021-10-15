@@ -89,21 +89,6 @@ const simin = JSON.parse(fs.readFileSync('./src/simi.json'))
 const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const chatban = JSON.parse(fs.readFileSync('./src/banchat.json'))
-const tebakanime = JSON.parse(fs.readFileSync('./src/tebakanime.json'))
-const tebakgambar = JSON.parse(fs.readFileSync('./src/tebakgambar.json'))
-const asahotak = JSON.parse(fs.readFileSync('./src/asahotak.json'))
-const caklontong = JSON.parse(fs.readFileSync('./src/caklontong.json'))
-const tebaksiapaaku = JSON.parse(fs.readFileSync('./src/tebaksiapaaku.json'))
-const tebakbendera = JSON.parse(fs.readFileSync('./src/tebakbendera.json'))
-const susunkata = JSON.parse(fs.readFileSync('./src/susunkata.json'))
-const tebakata = JSON.parse(fs.readFileSync('./src/tebakata.json'))
-const tebaklirik = JSON.parse(fs.readFileSync('./src/tebaklirik.json'))
-const tebakjenaka = JSON.parse(fs.readFileSync('./src/tebakjenaka.json'))
-const tebakimia = JSON.parse(fs.readFileSync('./src/tebakimia.json'))
-const kuismath = JSON.parse(fs.readFileSync('./src/kuismath.json'))
-const tebaklagu = JSON.parse(fs.readFileSync('./src/tebaklagu.json'))
-const tebaktebakan = JSON.parse(fs.readFileSync('./src/tebaktebakan.json'))
-const family100 = [];
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
             + 'FN:NatGanz\n' //ganti
@@ -534,148 +519,6 @@ break
 
 //=============> fun menu <===============\\
              
-case 'game'
-const (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = tebakanime[sender.split('@')[0]]
-const (budy.toLowerCase() == jawaban) {
-var htgmu = randomNomor(100)
-atm.addKoinUser(sender, htgmu, _uang)
-await reply(`*_🎮 Tebak Anime 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmu} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebakanime*`)
-delete tebakanime[sender.split('@')[0]]
-fs.writeFileSync("./src/tebakanime.json", JSON.stringify(tebakanime))
-}
-break
-const (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = tebaklagu[sender.split('@')[0]]
-const (budy.toLowerCase() == jawaban) {
-var htpl = randomNomor(100)
-atm.addKoinUser(sender, htpl, _uang)
-await reply(`*_🎮 Tebak Lagu 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htpl} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebaklagu*`)
-delete tebaklagu[sender.split('@')[0]]
-fs.writeFileSync("./src/tebaklagu.json", JSON.stringify(tebaklagu))
-}
-break
-const (tebaktebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = tebaktebakan[sender.split('@')[0]]
-const (budy.toLowerCase() == jawaban) {
-var htpu = randomNomor(100)
-atm.addKoinUser(sender, htpu, _uang)
-await reply(`*_🎮 Tebak Tebakan 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htpu} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebaktebakan*`)
-delete tebaktebakan[sender.split('@')[0]]
-fs.writeFileSync("./src/tebaktebakan.json", JSON.stringify(tebaktebakan))                    
-}
-break
-const (kuismath.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = kuismath[sender.split('@')[0]]
-const (budy.toLowerCase() == jawaban) {
-var htcc = randomNomor(100)
-atm.addKoinUser(sender, htcc, _uang)
-await reply(`*_🎮 Kuis Matematika  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htcc} 💰_\n\nIngin bermain lagi? kirim *${prefix}kuismath*`)
-delete kuismath[sender.split('@')[0]]
-fs.writeFileSync("./src/kuismath.json", JSON.stringify(kuismath))
-}
-break
-const (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = asahotak[sender.split('@')[0]]
-const (budy.toLowerCase() == jawaban) {
-addKoinUser(sender, htgm, _uang)
-await reply(`*_🎮 Asah Otak  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgm} 💰_\n\nIngin bermain lagi? kirim *${prefix}asahotak*`)
-delete asahotak[sender.split('@')[0]]
-fs.writeFileSync("./src/asahotak.json", JSON.stringify(asahotak))
-}
-break
-const (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = caklontong[sender.split('@')[0]]
-const (budy.toLowerCase() == jawaban) {
-var htgmi = randomNomor(100)
-atm.addKoinUser(sender, htgmi, _uang)
-await reply(`*_🎮 Caklontong  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmi} 💰_\n\nIngin bermain lagi? kirim *${prefix}caklontong*`)
-delete caklontong[sender.split('@')[0]]
-fs.writeFileSync("./src/caklontong.json", JSON.stringify(caklontong))
-}
-break
-const (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = tebakjenaka[sender.split('@')[0]]
-const (budy.toLowerCase() == jawaban) {
-var htgmuu = randomNomor(100)
-atm.addKoinUser(sender, htgmuu, _uang)
-await reply(`*_🎮 Tebak Jenaka  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmuu} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebakjenaka*`)
-delete tebakjenaka[sender.split('@')[0]]
-fs.writeFileSync("./src/tebakjenaka.json", JSON.stringify(tebakjenaka))
-}
-break
-const (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = tebaklirik[sender.split('@')[0]]
-const (budy.toLowerCase() == jawaban) {
-var htgmii = randomNomor(100)
-atm.addKoinUser(sender, htgmii, _uang)
-await reply(`*_🎮 Tebak Lirik 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmii} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebaklirik*`)
-delete tebaklirik[sender.split('@')[0]]
-fs.writeFileSync("./src/tebaklirik.json", JSON.stringify(tebaklirik))
-}
-break
-const (tebakimia.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = tebakimia[sender.split('@')[0]]
-var htgmcc = randomNomor(100)
-atm.addKoinUser(sender, htgmcc, _uang)
-await reply(`*_🎮 Tebak Kimia 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmcc} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebakkimia*`)
-delete tebakimia[sender.split('@')[0]]
-fs.writeFileSync("./src/tebakimia.json", JSON.stringify(tebakimia))
-}
-break
-const (tebaksiapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = tebaksiapaaku[sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-var htgmk = randomNomor(100)
-atm.addKoinUser(sender, htgmk, _uang)
-await reply(`*_🎮 Tebak Siapakah Aku  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmk} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebaksiapaaku*`)
-delete tebaksiapaaku[sender.split('@')[0]]
-fs.writeFileSync("./src/tebaksiapaaku.json", JSON.stringify(tebaksiapaaku))
-}
-break
-const (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = tebakbendera[sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-var html = randomNomor(100)
-atm.addKoinUser(sender, html, _uang)
-await reply(`*_🎮 Tebak Bendera  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${html} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebakbendera*`)
-delete tebakbendera[sender.split('@')[0]]
-fs.writeFileSync("./src/tebakbendera.json", JSON.stringify(tebakbendera))
-}
-break
-const (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = susunkata[sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-var htmp = randomNomor(100)
-atm.addKoinUser(sender, htmp, _uang)
-await reply(`*_🎮 Susun Kata  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htmp} 💰_\n\nIngin bermain lagi? kirim *${prefix}susunkata*`)
-delete susunkata[sender.split('@')[0]]
-fs.writeFileSync("./src/susunkata.json", JSON.stringify(susunkata))
-}
-break
-const (tebakata.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
-kuis = true
-jawaban = tebakata[sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-var htmu = randomNomor(100)
-atm.addKoinUser(sender, htmu, _uang)
-await reply(`*_🎮 Tebak Kata  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htmu} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebakkata*`)
-delete tebakata[sender.split('@')[0]]
-fs.writeFileSync("./src/tebakata.json", JSON.stringify(tebakata))
-}
-break
 case 'herolist':
 await herolist().then((ress) => {
 let listt = `*List hero untuk feature ${prefix}herodetail*\n\n`
@@ -715,24 +558,6 @@ her = `*Hero details ${body.slice(12)}*
 *Story* : ${res.background_story}
 `
 reply(her)
-break
-       case 'slot':
-              const sotoy = ['🍊 : 🍒 : 🍐','🍒 : ?? : 🍊','?? : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍒 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : ?? : 🍇']
-              somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
-              somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
-              somtoyyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
-              if (somtoyy  == '🍌 : 🍌 : 🍌') {
-              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
-              } else if (somtoyy == '?? : 🍒 : 🍒') {
-              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
-              } else if (somtoyy == '🔔 : 🔔 : 🔔') {
-              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
-              } else if (somtoyy == '?? : 🍐 : 🍐') {
-              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
-              } else if (somtoyy == '🍇 : 🍇 : 🍇') {
-              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
-              } else {
-              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU LOSE*  ]`)
 }
 break
 case 'swm':
