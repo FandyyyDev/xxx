@@ -717,45 +717,6 @@ her = `*Hero details ${body.slice(12)}*
 reply(her)
 break
 //------------------< Game >------------------- 
-case 'gelud':
-if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
-if (!isGroup) return reply(mess.only.group)
-if (mek.message.extendedTextMessage.contextInfo.mentionedJid > 1) return reply('Hanya bisa dengan 1 orang')
-if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) return
-if (args.length === 0) return reply(`Tag Lawan Yang Ingin Diajak Bermain Game`)
-if (fs.existsSync(`./media/${from}.json`)) return reply(`Sedang Ada Sesi, tidak dapat dijalankan secara bersamaan\nKetik *${prefix}delsesigelud*, untuk menghapus sesi`)
-					
-gelutSkuy = setGelud(`${from}`)
-gelutSkuy.status = false
-gelutSkuy.Z = sender.replace("@s.whatsapp.net", "")
-gelutSkuy.Y = args[0].replace("@", "");
-fs.writeFileSync(`./media/${from}.json`, JSON.stringify(gelutSkuy, null, 2))
-starGame = `👑 Memulai Game Baku Hantam 👊🏻
-
-• @${sender.replace("@s.whatsapp.net", "")} Menantang Bergelud
-[ ${args[0]} ] Ketik Y/N untuk menerima atau menolak permainan`
-
-client.sendMessage(from, starGame, text, {quoted: mek, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
-gameAdd(sender, glimit)
-}
-break
-        case 'delsesigelud':
-               if (!isGroup) return reply(mess.only.group)
-               if (fs.existsSync('./media/' + from + '.json')) {
-               fs.unlinkSync('./media/' + from + '.json')
-               reply('Berhasil Menghapus Sesi Gelud')
-               } else {
-               reply('Tidak ada sesi yang berlangsung')
-}
-break
-        case 'delsesittt':
-        case 'resetgame':
-               if (!isGroup) return reply(mess.only.group)
-               if (!isTTT) return reply('Tidak Ada Permainan Di Grub Ini')
-               naa = ky_ttt.filter(toek => !toek.id.includes(from)) 
-               ky_ttt = naa 
-               reply('Sukses Mereset Game')
-               break
        case 'tebakanime':
               if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
               if (tebakanime.hasOwnProperty(sender.split('@')[0])) return reply("Selesein yg sebelumnya dulu atuh")
