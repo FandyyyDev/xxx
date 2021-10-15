@@ -89,6 +89,21 @@ const simin = JSON.parse(fs.readFileSync('./src/simi.json'))
 const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const chatban = JSON.parse(fs.readFileSync('./src/banchat.json'))
+const tebakanime = JSON.parse(fs.readFileSync('./src/tebakanime.json'))
+const tebakgambar = JSON.parse(fs.readFileSync('./src/tebakgambar.json'))
+const asahotak = JSON.parse(fs.readFileSync('./src/asahotak.json'))
+const caklontong = JSON.parse(fs.readFileSync('./src/caklontong.json'))
+const tebaksiapaaku = JSON.parse(fs.readFileSync('./src/tebaksiapaaku.json'))
+const tebakbendera = JSON.parse(fs.readFileSync('./src/tebakbendera.json'))
+const susunkata = JSON.parse(fs.readFileSync('./src/susunkata.json'))
+const tebakata = JSON.parse(fs.readFileSync('./src/tebakata.json'))
+const tebaklirik = JSON.parse(fs.readFileSync('./src/tebaklirik.json'))
+const tebakjenaka = JSON.parse(fs.readFileSync('./src/tebakjenaka.json'))
+const tebakimia = JSON.parse(fs.readFileSync('./src/tebakimia.json'))
+const kuismath = JSON.parse(fs.readFileSync('./src/kuismath.json'))
+const tebaklagu = JSON.parse(fs.readFileSync('./src/tebaklagu.json'))
+const tebaktebakan = JSON.parse(fs.readFileSync('./src/tebaktebakan.json'))
+const family100 = [];
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
             + 'FN:NatGanz\n' //ganti
@@ -518,8 +533,150 @@ console.log(res)
 break
 
 //=============> fun menu <===============\\
+             
+case 'game'
 
-
+if (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = tebakanime[sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) {
+var htgmu = randomNomor(100)
+atm.addKoinUser(sender, htgmu, _uang)
+await reply(`*_🎮 Tebak Anime 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmu} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebakanime*`)
+delete tebakanime[sender.split('@')[0]]
+fs.writeFileSync("./src/tebakanime.json", JSON.stringify(tebakanime))
+}
+break
+if (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = tebaklagu[sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) {
+var htpl = randomNomor(100)
+atm.addKoinUser(sender, htpl, _uang)
+await reply(`*_🎮 Tebak Lagu 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htpl} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebaklagu*`)
+delete tebaklagu[sender.split('@')[0]]
+fs.writeFileSync("./src/tebaklagu.json", JSON.stringify(tebaklagu))
+}
+break
+if (tebaktebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = tebaktebakan[sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) {
+var htpu = randomNomor(100)
+atm.addKoinUser(sender, htpu, _uang)
+await reply(`*_🎮 Tebak Tebakan 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htpu} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebaktebakan*`)
+delete tebaktebakan[sender.split('@')[0]]
+fs.writeFileSync("./src/tebaktebakan.json", JSON.stringify(tebaktebakan))                    
+}
+break
+if (kuismath.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = kuismath[sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) {
+var htcc = randomNomor(100)
+atm.addKoinUser(sender, htcc, _uang)
+await reply(`*_🎮 Kuis Matematika  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htcc} 💰_\n\nIngin bermain lagi? kirim *${prefix}kuismath*`)
+delete kuismath[sender.split('@')[0]]
+fs.writeFileSync("./src/kuismath.json", JSON.stringify(kuismath))
+}
+break
+if (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = asahotak[sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) {
+addKoinUser(sender, htgm, _uang)
+await reply(`*_🎮 Asah Otak  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgm} 💰_\n\nIngin bermain lagi? kirim *${prefix}asahotak*`)
+delete asahotak[sender.split('@')[0]]
+fs.writeFileSync("./src/asahotak.json", JSON.stringify(asahotak))
+}
+break
+if (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = caklontong[sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) {
+var htgmi = randomNomor(100)
+atm.addKoinUser(sender, htgmi, _uang)
+await reply(`*_🎮 Caklontong  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmi} 💰_\n\nIngin bermain lagi? kirim *${prefix}caklontong*`)
+delete caklontong[sender.split('@')[0]]
+fs.writeFileSync("./src/caklontong.json", JSON.stringify(caklontong))
+}
+break
+if (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = tebakjenaka[sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) {
+var htgmuu = randomNomor(100)
+atm.addKoinUser(sender, htgmuu, _uang)
+await reply(`*_🎮 Tebak Jenaka  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmuu} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebakjenaka*`)
+delete tebakjenaka[sender.split('@')[0]]
+fs.writeFileSync("./src/tebakjenaka.json", JSON.stringify(tebakjenaka))
+}
+break
+if (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = tebaklirik[sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) {
+var htgmii = randomNomor(100)
+atm.addKoinUser(sender, htgmii, _uang)
+await reply(`*_🎮 Tebak Lirik 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmii} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebaklirik*`)
+delete tebaklirik[sender.split('@')[0]]
+fs.writeFileSync("./src/tebaklirik.json", JSON.stringify(tebaklirik))
+}
+break
+if (tebakimia.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = tebakimia[sender.split('@')[0]]
+var htgmcc = randomNomor(100)
+atm.addKoinUser(sender, htgmcc, _uang)
+await reply(`*_🎮 Tebak Kimia 🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmcc} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebakkimia*`)
+delete tebakimia[sender.split('@')[0]]
+fs.writeFileSync("./src/tebakimia.json", JSON.stringify(tebakimia))
+}
+break
+if (tebaksiapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = tebaksiapaaku[sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) {
+var htgmk = randomNomor(100)
+atm.addKoinUser(sender, htgmk, _uang)
+await reply(`*_🎮 Tebak Siapakah Aku  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htgmk} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebaksiapaaku*`)
+delete tebaksiapaaku[sender.split('@')[0]]
+fs.writeFileSync("./src/tebaksiapaaku.json", JSON.stringify(tebaksiapaaku))
+}
+break
+if (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = tebakbendera[sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) {
+var html = randomNomor(100)
+atm.addKoinUser(sender, html, _uang)
+await reply(`*_🎮 Tebak Bendera  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${html} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebakbendera*`)
+delete tebakbendera[sender.split('@')[0]]
+fs.writeFileSync("./src/tebakbendera.json", JSON.stringify(tebakbendera))
+}
+break
+if (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = susunkata[sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) {
+var htmp = randomNomor(100)
+atm.addKoinUser(sender, htmp, _uang)
+await reply(`*_🎮 Susun Kata  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htmp} 💰_\n\nIngin bermain lagi? kirim *${prefix}susunkata*`)
+delete susunkata[sender.split('@')[0]]
+fs.writeFileSync("./src/susunkata.json", JSON.stringify(susunkata))
+}
+break
+if (tebakata.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
+kuis = true
+jawaban = tebakata[sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) {
+var htmu = randomNomor(100)
+atm.addKoinUser(sender, htmu, _uang)
+await reply(`*_🎮 Tebak Kata  🎮_*\n\n*•* *Jawaban Benar🎉*\n*•* *Mendapatkan* : _Rp ${htmu} 💰_\n\nIngin bermain lagi? kirim *${prefix}tebakkata*`)
+delete tebakata[sender.split('@')[0]]
+fs.writeFileSync("./src/tebakata.json", JSON.stringify(tebakata))
+}
+break
 case 'herolist':
 await herolist().then((ress) => {
 let listt = `*List hero untuk feature ${prefix}herodetail*\n\n`
@@ -559,6 +716,374 @@ her = `*Hero details ${body.slice(12)}*
 *Story* : ${res.background_story}
 `
 reply(her)
+break
+//------------------< Game >------------------- 
+case 'gelud':
+if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+if (!isGroup) return reply(mess.only.group)
+if (mek.message.extendedTextMessage.contextInfo.mentionedJid > 1) return reply('Hanya bisa dengan 1 orang')
+if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) return
+if (args.length === 0) return reply(`Tag Lawan Yang Ingin Diajak Bermain Game`)
+if (fs.existsSync(`./media/${from}.json`)) return reply(`Sedang Ada Sesi, tidak dapat dijalankan secara bersamaan\nKetik *${prefix}delsesigelud*, untuk menghapus sesi`)
+					
+gelutSkuy = setGelud(`${from}`)
+gelutSkuy.status = false
+gelutSkuy.Z = sender.replace("@s.whatsapp.net", "")
+gelutSkuy.Y = args[0].replace("@", "");
+fs.writeFileSync(`./media/${from}.json`, JSON.stringify(gelutSkuy, null, 2))
+starGame = `👑 Memulai Game Baku Hantam 👊🏻
+
+• @${sender.replace("@s.whatsapp.net", "")} Menantang Bergelud
+[ ${args[0]} ] Ketik Y/N untuk menerima atau menolak permainan`
+
+client.sendMessage(from, starGame, text, {quoted: mek, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
+gameAdd(sender, glimit)
+}
+break
+       case 'tebakanime':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (tebakanime.hasOwnProperty(sender.split('@')[0])) return reply("Selesein yg sebelumnya dulu atuh")
+              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebakchara?apikey=${setting.lolkey}`)
+              get_result = get_result.result
+              ini_image = get_result.image
+              jawaban = get_result.name
+              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              ini_buffer = await getBuffer(ini_image)
+              dha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: '*+* ```Tebak Anime```\n\n• *Petunjuk* :'+kisi_kisi+'\n• *Waktu* : 30s' }).then(() => {
+              tebakanime[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/tebakanime.json", JSON.stringify(tebakanime))
+})
+              await sleep(30000)
+              if (tebakanime.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("*Jawaban*: " + jawaban)
+              delete tebakanime[sender.split('@')[0]]
+              fs.writeFileSync("./src/tebakanime.json", JSON.stringify(tebakanime))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'tebaklagu':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (tebaklagu.hasOwnProperty(sender.split('@')[0])) return reply("Selesein yg sebelumnya dulu atuh")
+              get_result = await fetchJson(`https://api.xteam.xyz/game/tebaklagu?apikey=${setting.xteamkey}&id=4mFuArYRh3SO8jfffYLSER`)
+              get_result = get_result.result
+              ini_audio = get_result.preview
+              jawaban = get_result.judul
+              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              ini_buffer = await getBuffer(ini_audio)
+              reply('*+* ```Tebak Lagu```\n\n• *Petunjuk* :'+kisi_kisi+'\n• *Waktu* : 30s')
+              dha.sendMessage(from, ini_buffer, audio, {quoted: mek}).then(() => {
+              tebaklagu[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/tebaklagu.json", JSON.stringify(tebaklagu))
+})
+              await sleep(30000)
+              if (tebaklagu.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("*Jawaban*: " + jawaban)
+              delete tebaklagu[sender.split('@')[0]]
+              fs.writeFileSync("./src/tebaklagu.json", JSON.stringify(tebaklagu))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'tebaktebakan':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (tebaktebakan.hasOwnProperty(sender.split('@')[0])) return reply("Masih ada soal yg belum terjawab")
+              get_result = await fetchJson(`https://api.xteam.xyz/game/tebaktebakan?APIKEY=${setting.xteamkey}`)
+              get_result = get_result.result
+              jawaban = get_result.jawaban
+              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              pertanyaan = get_result.soal
+              dha.sendMessage(from, '*+* ```Tebak Tebakan```\n\n• *soal* :'+pertanyaan+'\n• *kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
+              tebaktebakan[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/tebaktebakan.json", JSON.stringify(tebaktebakan))
+})
+              await sleep(30000)
+              if (tebaktebakan.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("Jawaban: " + jawaban)
+              delete tebaktebakan[sender.split('@')[0]]
+              fs.writeFileSync("./src/tebaktebakan.json", JSON.stringify(tebaktebakan))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'kuismath':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (kuismath.hasOwnProperty(sender.split('@')[0])) return reply("Selesein yg sebelumnya dulu atuh")
+              get_result = await fetchJson(`https://api-yogipw.herokuapp.com/api/kuis/math`)
+              ini_image = get_result.soal
+              jawaban = get_result.jawaban
+              ini_buffer = await getBuffer(ini_image)
+              dha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: '*+* ```Kuis Matematika```\n\nSilahkan jawab soal berikut ini\n\n• *Waktu* : 50s' }).then(() => {
+              kuismath[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/kuismath.json", JSON.stringify(kuismath))
+})
+              await sleep(50000)
+              if (kuismath.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("*Jawaban*: " + jawaban)
+              delete kuismath[sender.split('@')[0]]
+              fs.writeFileSync("./src/kuismath.json", JSON.stringify(kuismath))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'tebakgambar':
+              if (tebakgambar.hasOwnProperty(sender.split('@')[0])) return reply("Selesein yg sebelumnya dulu atuh")
+              get_result = await fetchJson(`http://zekais-api.herokuapp.com/tebakgambar`)
+              ini_image = get_result.soal
+              jawaban = get_result.jawaban
+              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              ini_buffer = await getBuffer(ini_image)
+              dha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: 'Silahkan jawab soal berikut ini\n\nPetunjuk :'+kisi_kisi+'\nWaktu : 30s' }).then(() => {
+              tebakgambar[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/tebakgambar.json", JSON.stringify(tebakgambar))
+})
+              await sleep(30000)
+              if (tebakgambar.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("*Jawaban*: " + jawaban)
+              delete tebakgambar[sender.split('@')[0]]
+              fs.writeFileSync("./src/tebakgambar.json", JSON.stringify(tebakgambar))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'siapaaku':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (tebaksiapaaku.hasOwnProperty(sender.split('@')[0])) return reply("Masih ada soal yg belum terjawab")
+              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/siapaaku?apikey=${setting.lolkey}`)
+              get_result = get_result.result
+              jawaban = get_result.answer
+              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              pertanyaan = get_result.question
+              dha.sendMessage(from, '*+* ```Tebak Siapakah Aku```\n\n• *soal* :'+pertanyaan+'\n• *kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
+              tebaksiapaaku[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/tebaksiapaaku.json", JSON.stringify(tebaksiapaaku))
+})
+              await sleep(30000)
+              if (tebaksiapaaku.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("Jawaban: " + jawaban)
+              delete tebaksiapaaku[sender.split('@')[0]]
+              fs.writeFileSync("./src/tebaksiapaaku.json", JSON.stringify(tebaksiapaaku))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'tebakkata':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (tebakata.hasOwnProperty(sender.split('@')[0])) return reply("Masih ada soal yg belum terjawab")
+              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/kata?apikey=${setting.lolkey}`)
+              get_result = get_result.result
+              jawaban = get_result.jawaban
+              pertanyaan = get_result.pertanyaan
+              dha.sendMessage(from, '*+* ```Tebak Kata```\n\n• *Soal* :'+pertanyaan+'\n• *Waktu :* 30s', text, { quoted: mek}).then(() => {
+              tebakata[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/tebakata.json", JSON.stringify(tebakata))
+})
+              await sleep(30000)
+              if (tebakata.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("Jawaban: " + jawaban)
+              delete tebakata[sender.split('@')[0]]
+              fs.writeFileSync("./src/tebakata.json", JSON.stringify(tebakata))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'tebaklirik':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (tebaklirik.hasOwnProperty(sender.split('@')[0])) return reply("Masih ada soal yg belum terjawab")
+              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/lirik?apikey=${setting.lolkey}`)
+              get_result = get_result.result
+              jawaban = get_result.answer
+              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              pertanyaan = get_result.question
+              dha.sendMessage(from, '*+* ```Tebak Lirik```\n\n• *Soal* :'+pertanyaan+'\n• *Kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
+              tebaklirik[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/tebaklirik.json", JSON.stringify(tebaklirik))
+})
+              await sleep(30000)
+              if (tebaklirik.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("Jawaban: " + jawaban)
+              delete tebaklirik[sender.split('@')[0]]
+              fs.writeFileSync("./src/tebaklirik.json", JSON.stringify(tebaklirik))
+}
+              gameAdd(sender, glimit)
+              break
+      case 'tebakjenaka':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (tebakjenaka.hasOwnProperty(sender.split('@')[0])) return reply("Masih ada soal yg belum terjawab")
+              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/jenaka?apikey=${setting.lolkey}`)
+              get_result = get_result.result
+              jawaban = get_result.answer
+              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              pertanyaan = get_result.question
+              dha.sendMessage(from, '*+* ```Tebak Jenaka```\n\n• *Soal* :'+pertanyaan+'\n• *Kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
+              tebakjenaka[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/tebakjenaka.json", JSON.stringify(tebakjenaka))
+})
+              await sleep(30000)
+              if (tebakjenaka.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("Jawaban: " + jawaban)
+              delete tebakjenaka[sender.split('@')[0]]
+              fs.writeFileSync("./src/tebakjenaka.json", JSON.stringify(tebakjenaka))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'kimiakuis':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (tebakimia.hasOwnProperty(sender.split('@')[0])) return reply("Masih ada soal yg belum terjawab")
+              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/unsurkimia?apikey=${setting.lolkey}`)
+              get_result = get_result.result
+              jawaban = get_result.lambang
+              pertanyaan = get_result.nama
+              dha.sendMessage(from, '*+* ```Tebak Kimia```\n\n• *Soal* :'+pertanyaan+'\n• *Waktu :* 30s', text, { quoted: mek}).then(() => {
+              tebakimia[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/tebakimia.json", JSON.stringify(tebakimia))
+})
+              await sleep(30000)
+              if (tebakimia.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("Jawaban: " + jawaban)
+              delete tebakimia[sender.split('@')[0]]
+              fs.writeFileSync("./src/tebakimia.json", JSON.stringify(tebakimia))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'tebakbendera':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (tebakbendera.hasOwnProperty(sender.split('@')[0])) return reply("Masih ada soal yg belum terjawab")
+              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/bendera?apikey=${setting.lolkey}`)
+              get_result = get_result.result
+              jawaban = get_result.name
+              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              pertanyaan = get_result.flag
+              dha.sendMessage(from, '*+* ```Tebak Bendera```\n\n• *Bendera* :'+pertanyaan+'\n• *kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
+              tebakbendera[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/tebakbendera.json", JSON.stringify(tebakbendera))
+})
+              await sleep(30000)
+              if (tebakbendera.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("Jawaban: " + jawaban)
+              delete tebakbendera[sender.split('@')[0]]
+              fs.writeFileSync("./src/tebakbendera.json", JSON.stringify(tebakbendera))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'susunkata':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (susunkata.hasOwnProperty(sender.split('@')[0])) return reply("Masih ada soal yg belum terjawab")
+              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/susunkata?apikey=${setting.lolkey}`)
+              get_result = get_result.result
+              jawaban = get_result.jawaban
+              pertanyaan = get_result.pertanyaan
+              dha.sendMessage(from, '*+* ```Susun Kata```\n\n• *Soal* :'+pertanyaan+'\n• *Waktu :* 30s', text, { quoted: mek}).then(() => {
+              susunkata[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/susunkata.json", JSON.stringify(susunkata))
+})
+              await sleep(30000)
+              if (susunkata.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("Jawaban: " + jawaban)
+              delete susunkata[sender.split('@')[0]]
+              fs.writeFileSync("./src/susunkata.json", JSON.stringify(susunkata))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'asahotak':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (asahotak.hasOwnProperty(sender.split('@')[0])) return reply("Masih ada soal yg belum terjawab")
+              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/asahotak?apikey=${setting.lolkey}`)
+              get_result = get_result.result
+              jawaban = get_result.jawaban
+              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              pertanyaan = get_result.pertanyaan
+              dha.sendMessage(from, '*+* ```Asah Otak```\n\n• *soal* :'+pertanyaan+'\n• *kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
+              asahotak[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/asahotak.json", JSON.stringify(asahotak))
+})
+              await sleep(30000)
+              if (asahotak.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("Jawaban: " + jawaban)
+              delete asahotak[sender.split('@')[0]]
+              fs.writeFileSync("./src/asahotak.json", JSON.stringify(asahotak))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'caklontong':
+              if (isGame(sender, isPremium, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+              if (caklontong.hasOwnProperty(sender.split('@')[0])) return reply("Masih ada soal yg belum terjawab")
+              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/caklontong2?apikey=${setting.lolkey}`)
+              get_result = get_result.result
+              jawaban = get_result.answer
+              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              pertanyaan = get_result.question
+              dha.sendMessage(from, '*+* ```Caklontong```\n\n• *soal* :'+pertanyaan+'\n• *kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
+              caklontong[sender.split('@')[0]] = jawaban.toLowerCase()
+              fs.writeFileSync("./src/caklontong.json", JSON.stringify(caklontong))
+})
+              await sleep(30000)
+              if (caklontong.hasOwnProperty(sender.split('@')[0])) {
+              console.log(color("Jawaban: " + jawaban))
+              reply("Jawaban: " + jawaban)
+              delete caklontong[sender.split('@')[0]]
+              fs.writeFileSync("./src/caklontong.json", JSON.stringify(caklontong))
+}
+              gameAdd(sender, glimit)
+              break
+       case 'slot':
+              const sotoy = ['🍊 : 🍒 : 🍐','🍒 : ?? : 🍊','?? : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍒 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : ?? : 🍇']
+              somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
+              somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
+              somtoyyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
+              if (somtoyy  == '🍌 : 🍌 : 🍌') {
+              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
+              } else if (somtoyy == '?? : 🍒 : 🍒') {
+              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
+              } else if (somtoyy == '🔔 : 🔔 : 🔔') {
+              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
+              } else if (somtoyy == '?? : 🍐 : 🍐') {
+              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
+              } else if (somtoyy == '🍇 : 🍇 : 🍇') {
+              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
+              } else {
+              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU LOSE*  ]`)
+}
+              break
+       case 'suit': //nyolong dari zenz
+              if (!q) return reply(`Kirim perintah ${prefix}suit gunting / batu / kertas`)
+              const userspilih = q
+              if (!userspilih.match(/batu|gunting|kertas/)) return reply(`Pilih batu, kertas, gunting`)
+              var computer = Math.random();
+              if (computer < 0.34 ) {
+              computer = 'batu';
+              } else if( computer >= 0.34 && computer < 0.67) {
+              computer = 'gunting';
+              } else {
+              computer = 'kertas';
+}
+              if ( userspilih == computer ) {
+              reply(`Pertandingan Seri!`)
+              } else if ( userspilih == 'batu' ) {
+              if( computer == 'gunting' ) {
+              reply(`Kamu memilih Batu dan bot Gunting\nKamu menang!`)
+              } else {
+              reply(`Kamu memilih Batu dan bot memilih Kertas\nKamu kalah!`)
+}
+              } else if ( userspilih == 'gunting' ) {
+              if( computer == 'batu' ) {
+              reply(`Kamu memilih Gunting dan bot memilih Batu\nKamu kalah!`)
+              } else {
+              reply(`Kamu memilih Gunting dan bot Kertas\nKamu menang!`)
+}
+              } else if ( userspilih == 'kertas' ) {
+              if( computer == 'batu' ) {
+              reply(`Kamu memilih Kertas dan bot Batu\nKamu menang!`)
+              } else {
+              reply(`Kamu memilih Kertas dan bot memilih Gunting\nKamu kalah`)
+}
+}
 break
 case 'swm':
 if (type === 'imageMessage' || isTagedImage){
